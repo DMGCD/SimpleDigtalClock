@@ -70,6 +70,19 @@ private void running12(){
 
 
 }
+    public void btn24hOnAction(ActionEvent actionEvent) {
+        runningTime();
+        lblTime12.setVisible(false);
+        lblTime.setVisible(true);
+        btn12h.setVisible(true);
+        btn24H.setVisible(false);
+    }
 
+    public void btn12hOnAction(ActionEvent actionEvent) {
+        lblTime12.setVisible(true);
+        lblTime.setVisible(false);
+        btn12h.setVisible(false);
+        btn24H.setVisible(true);
+    }
 
 }
