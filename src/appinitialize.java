@@ -2,9 +2,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import javax.print.attribute.standard.PrinterMakeAndModel;
+import java.awt.*;
 import java.io.IOException;
 
 public class appinitialize extends Application {
@@ -20,6 +22,9 @@ public class appinitialize extends Application {
         Scene scene = new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();
+        Image image = new Image("image/clock.jpeg ");
+        primaryStage.getIcons().add(image);
+        primaryStage.setResizable(false);
         primaryStage.show();
 
 
