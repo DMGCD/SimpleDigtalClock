@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="276.0" prefWidth="503.0" style="-fx-background-color: black; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TimeFormcontroller">
+   <children>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="64.0" layoutY="96.0" text="00:00:00 A.M" textFill="#20d335">
+         <font>
+            <Font name="Algerian" size="69.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label fx:id="lblTime12" contentDisplay="CENTER" layoutX="64.0" layoutY="101.0" text="00:00:00 A.M" textFill="#1078e1">
+         <font>
+            <Font name="Algerian" size="69.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Label>
+      <Label fx:id="lblDate" layoutX="332.0" layoutY="23.0" text="Wed, Jul 4, 2001" textFill="#f8f6f6">
+         <font>
+            <Font name="Agency FB" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn24H" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#btn24hOnAction" style="-fx-background-color: white; -fx-background-radius: 6px;" text="24H">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btn12h" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#btn12hOnAction" style="-fx-background-color: white; -fx-background-radius: 6px;" text="12H">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
