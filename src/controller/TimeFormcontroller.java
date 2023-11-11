@@ -23,7 +23,28 @@ public class TimeFormcontroller {
 
         running12();
 }
+    private void runningTime(){
+        final  Thread thread = new Thread(()->{
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss a");
+            SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("EEE , MMM d , yyyy");
 
+            while(true){
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                final String time =simpleDateFormat.format(new Date());
+                final String date =simpleDateFormat1.format(new Date());
+                Platform.runLater(()->{
+                    lblTime.setText(time);
+                    lblDate.setText(date);
+                });
+
+            }
+        });
+        thread.start();
+    }
 private void running12(){
     final  Thread thread = new Thread(()->{
 
